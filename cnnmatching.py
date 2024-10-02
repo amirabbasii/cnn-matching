@@ -12,15 +12,9 @@ from skimage import transform
 def cnn_matching(path1,path2):
 
     _RESIDUAL_THRESHOLD = 30
-    #Test1nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8
-    imgfile1 = 'df-ms-data/1/df-googleearth-1k-20091227.jpg'
-    imgfile2 = 'df-ms-data/1/df-googleearth-1k-20181029.jpg'
-    imgfile1 = 'df-ms-data/1/df-uav-sar-500.jpg'
     
-
-    # read left image
-    image1 = imageio.imread(imgfile1)
-    image2 = imageio.imread(imgfile2)
+    image1 = imageio.imread(path1)
+    image2 = imageio.imread(path1)
 
     
     kps_left, sco_left, des_left = cnn_feature_extract(image1,  nfeatures = -1)
