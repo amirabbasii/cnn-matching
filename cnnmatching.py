@@ -13,8 +13,8 @@ def cnn_matching(path1,path2):
 
     _RESIDUAL_THRESHOLD = 30
     
-    image1 = imageio.imread(path1)
-    image2 = imageio.imread(path2)
+    # image1 = imageio.imread(path1)
+    # image2 = imageio.imread(path2)
 
     
     kps_left, sco_left, des_left = cnn_feature_extract(image1,  nfeatures = -1)
