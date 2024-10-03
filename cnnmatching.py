@@ -55,7 +55,7 @@ def cnn_matching(image1,image2):
     
     # Perform geometric verification using RANSAC.
     
-    inliers=np.sqrt(np.power(locations_1_to_use[0]-locations_2_to_use[0],2)+np.power(locations_1_to_use[1]-locations_2_to_use[1],2))
+    inliers=np.sqrt(np.power(locations_1_to_use[0]-locations_2_to_use[0],2)+np.power(locations_1_to_use[1]-locations_2_to_use[1],2))<100
     
     print('Found %d inliers' % sum(inliers))
     
