@@ -54,11 +54,8 @@ def cnn_matching(path1,path2):
     locations_2_to_use = np.array(locations_2_to_use)
     
     # Perform geometric verification using RANSAC.
-    _, inliers = measure.ransac((locations_1_to_use, locations_2_to_use),
-                              transform.AffineTransform,
-                              min_samples=3,
-                              residual_threshold=_RESIDUAL_THRESHOLD,
-                              max_trials=1000)
+    
+    inliers=np.sqrt(np.power(locations_1_to_use[0]-locations_2_to_use[0],2)+np.power(locations_1_to_use[1]-locations_2_to_use[1],2))
     
     print('Found %d inliers' % sum(inliers))
     
