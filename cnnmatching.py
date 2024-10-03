@@ -9,7 +9,7 @@ from skimage import measure
 from skimage import transform
 
 
-def cnn_matching(path1,path2):
+def cnn_matching(image1,image2):
 
     _RESIDUAL_THRESHOLD = 30
     
